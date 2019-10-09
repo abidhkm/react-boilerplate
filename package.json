@@ -1,0 +1,89 @@
+{
+  "name": "react-boilerplate",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@babel/polyfill": "^7.6.0",
+    "react": "^16.10.2",
+    "react-dom": "^16.10.2",
+    "react-scripts": "3.2.0"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "jest -u",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "jest": {
+    "coverageThreshold": {
+      "global": {
+        "branches": 80,
+        "functions": 80,
+        "lines": 80,
+        "statements": 80
+      }
+    },
+    "verbose": true,
+    "collectCoverage": true,
+    "collectCoverageFrom": [
+      "src/**/**/*.{js,jsx}",
+      "src/containers/**/**/*.{js,jsx,mjs}",
+      "src/components/**/**/*.{js,jsx,mjs}",
+      "!**/serviceWorker.js",
+      "!**/node_modules/**",
+      "!**/vendor/**"
+    ],
+    "setupFiles": [
+      "<rootDir>/src/setupTests.js"
+    ],
+    "transformIgnorePatterns": [
+      "<rootDir>/node_modules/jsdom/",
+      "<rootDir>/node_modules/"
+    ],
+    "transform": {
+      "^.+\\.(js|jsx|mjs)$": "<rootDir>/node_modules/babel-jest",
+      "^.+\\.css$": "<rootDir>/node_modules/react-scripts/config/jest/cssTransform.js",
+      "^(?!.*\\.(js|jsx|mjs|css|json)$)": "<rootDir>/node_modules/react-scripts/config/jest/fileTransform.js"
+    },
+    "moduleNameMapper": {
+      "^Src(.*)$": "<rootDir>/src$1",
+      "^Components(.*)$": "<rootDir>/src/components$1",
+      "^Containers(.*)$": "<rootDir>/src/containers$1"
+    }
+  },
+  "devDependencies": {
+    "enzyme": "^3.10.0",
+    "enzyme-adapter-react-16": "^1.14.0",
+    "@babel/core": "^7.6.2",
+    "@babel/plugin-proposal-class-properties": "^7.5.5",
+    "@babel/preset-env": "^7.6.2",
+    "@babel/preset-flow": "^7.0.0",
+    "@babel/preset-react": "^7.0.0",
+    "babel-core": "^7.0.0-bridge.0"
+  },
+  "babel": {
+    "presets": [
+      "@babel/preset-env",
+      "@babel/preset-react",
+      "@babel/preset-flow"
+    ],
+    "plugins": [
+      "@babel/plugin-proposal-class-properties"
+    ]
+  }
+}
